@@ -2,7 +2,7 @@
 // Nastavenie prístupu k skriptu z rôznych domén
 header("Access-Control-Allow-Origin: *");
 
-// Parametre pripojenia k MySQL databáze
+// Parametre pripojenia k MariaDB/MySQL databáze
 $servername = "localhost";
 $username = "paterson";
 $password = "MP115348";
@@ -17,7 +17,8 @@ if ($conn->connect_error) {
 }
 
 // Získanie údajov o teplote, vlhkosti a tlaku vzduchu
-$sql = "SELECT temperature, humidity, pressure FROM bme_table ORDER BY timestamp DESC LIMIT 1";     // Získanie najnovších hodnôt
+// Získanie najnovších hodnôt
+$sql = "SELECT temperature, humidity, pressure FROM bme_table ORDER BY timestamp DESC LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -38,4 +39,3 @@ if ($result->num_rows > 0) {
 // Uzatvorenie pripojenia k databáze
 $conn->close();
 ?>
-

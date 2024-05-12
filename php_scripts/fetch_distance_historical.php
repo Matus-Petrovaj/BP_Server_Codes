@@ -2,7 +2,7 @@
 // Nastavenie prístupu k skriptu z rôznych domén
 header("Access-Control-Allow-Origin: *");
 
-// Parametre pripojenia k MySQL databáze
+// Parametre pripojenia k MariaDB/MySQL databáze
 $servername = "localhost";
 $username = "paterson";
 $password = "MP115348";

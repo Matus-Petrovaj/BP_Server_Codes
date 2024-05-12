@@ -6,7 +6,7 @@ header("Access-Control-Allow-Origin: *");
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Parametre pripojenia k MySQL databáze
+// Parametre pripojenia k MariaDB/MySQL databáze
 $servername = "localhost";
 $username = "paterson";
 $password = "MP115348";
